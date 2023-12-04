@@ -4,14 +4,16 @@
 //
 //  Created by Haneen Rida Shagroon on 02/05/1445 AH.
 //
+
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var isActive: Bool = false
-
+    
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
+            VStack(spacing: 0) {
                 NavigationLink(destination: SecondView(), isActive: $isActive) {
                     EmptyView()
                 }
@@ -22,29 +24,23 @@ struct ContentView: View {
                         isActive = true
                     }
                 }
-
-                Image("logo")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .edgesIgnoringSafeArea(.all)
-                                       
+                VStack{
+                    Image("logo")
+                    Text("فكّر أقل واطبخ أكثر")
+                    .dynamicTypeSize(.small)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure the VStack fills the available space
+                    .background(Color("background"))
+                    .ignoresSafeArea(.all)
+                 
             }
-            
+           
         }
-    
+        
     }
 }
 
-
-    var body: some View {
-        Text("This is the Second View")
-            .navigationTitle("Second View")
-    }
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview{
+   
         ContentView()
     }
-}

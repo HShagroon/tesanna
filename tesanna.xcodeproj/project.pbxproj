@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3BEAE32B1DB56E00244D42 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BEAE22B1DB56E00244D42 /* ImageDetailView.swift */; };
+		6B3BEAE62B1DB6F000244D42 /* CuisineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BEAE52B1DB6F000244D42 /* CuisineModel.swift */; };
+		6B3BEAE92B1DB79700244D42 /* CuisineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */; };
 		6B5D51892B06696400BAE163 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D51882B06696400BAE163 /* SecondView.swift */; };
 		6B5D518B2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */; };
 		6BC0CA072B05F8FF00617411 /* tesannaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0CA062B05F8FF00617411 /* tesannaApp.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B3BEAE22B1DB56E00244D42 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		6B3BEAE52B1DB6F000244D42 /* CuisineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineModel.swift; sourceTree = "<group>"; };
+		6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineViewModel.swift; sourceTree = "<group>"; };
 		6B5D51882B06696400BAE163 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "alfont_com_HONORSansArabicUI-M.ttf"; path = "../../../../Downloads/alfont_com_HONORSansArabicUI-M.ttf"; sourceTree = "<group>"; };
 		6BC0CA032B05F8FF00617411 /* tesanna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tesanna.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +48,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3BEAE42B1DB69900244D42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B3BEAE52B1DB6F000244D42 /* CuisineModel.swift */,
+				FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B3BEAE72B1DB75800244D42 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */,
+				FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B3BEAEA2B1DB86200244D42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BC0CA062B05F8FF00617411 /* tesannaApp.swift */,
+				6BC0CA082B05F8FF00617411 /* ContentView.swift */,
+				6B5D51882B06696400BAE163 /* SecondView.swift */,
+				6B3BEAE22B1DB56E00244D42 /* ImageDetailView.swift */,
+				FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6BC0C9FA2B05F8FF00617411 = {
 			isa = PBXGroup;
 			children = (
-				6B5D51882B06696400BAE163 /* SecondView.swift */,
 				6BC0CA052B05F8FF00617411 /* tesanna */,
 				6BC0CA042B05F8FF00617411 /* Products */,
 			);
@@ -62,13 +97,10 @@
 		6BC0CA052B05F8FF00617411 /* tesanna */ = {
 			isa = PBXGroup;
 			children = (
-				6BC0CA062B05F8FF00617411 /* tesannaApp.swift */,
-				6BC0CA082B05F8FF00617411 /* ContentView.swift */,
-				FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */,
-				FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */,
-				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
+				6B3BEAEA2B1DB86200244D42 /* Views */,
+				6B3BEAE72B1DB75800244D42 /* ViewModel */,
+				6B3BEAE42B1DB69900244D42 /* Model */,
 				6BC0CA0C2B05F90100617411 /* Preview Content */,
-				FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */,
 			);
 			path = tesanna;
 			sourceTree = "<group>";
@@ -76,6 +108,7 @@
 		6BC0CA0C2B05F90100617411 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */,
 				6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */,
 			);
@@ -154,10 +187,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5D51892B06696400BAE163 /* SecondView.swift in Sources */,
+				6B3BEAE32B1DB56E00244D42 /* ImageDetailView.swift in Sources */,
 				6BC0CA092B05F8FF00617411 /* ContentView.swift in Sources */,
 				FD6888F02B1733D100F78C80 /* RecipeViewModel.swift in Sources */,
 				FDF0D9C22B0F4F9900A8E694 /* FavoritesPage.swift in Sources */,
+				6B3BEAE92B1DB79700244D42 /* CuisineViewModel.swift in Sources */,
 				6BC0CA072B05F8FF00617411 /* tesannaApp.swift in Sources */,
+				6B3BEAE62B1DB6F000244D42 /* CuisineModel.swift in Sources */,
 				FD6888EC2B15CCB800F78C80 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
