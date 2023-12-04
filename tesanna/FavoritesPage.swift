@@ -8,46 +8,63 @@
 import SwiftUI
 
 struct FavoritesPage: View {
+    var recipeVM = RecipeViewModel()
+    
     var body: some View {
-        List{
-            //get details from recipe object
-            createRecipeView(recipeName: "بيتزا مارقريتا", recipeCuisine: "إيطالي", recipeImage: "MargaritaPizza")
-            
-        }.padding().background(Color("background")).navigationTitle(Text("المفضلة"))
+        @State var favoriteRecipes = recipeVM.fetchFavorites()
         
+        ScrollView{
+            if (favoriteRecipes.isEmpty){
+                displayEmptyMsg()
+
+            }
+            else{
+                createRecipeView(recipe: favoriteRecipes[0])
+            }
+            
+        }.padding().background(Color("background")).navigationTitle(Text("المفضلة")
+            .font(.title))
+            
+        
+    }
+    
+    func createRecipeView(recipe: RecipeModel) -> some View{
+        return ZStack{
+            RoundedRectangle(cornerRadius: 8).fill(Color("cardColor"))
+            Image(systemName: "heart.fill")
+                .foregroundColor(Color("PrimaryYellow")).position(CGPoint(x: 24.0, y: 22.0)).onTapGesture {
+                    recipeVM.unsaveRecipe(index: 0)
+                    displayEmptyMsg()
+                }
+            
+            HStack {
+                Spacer()
+                
+                VStack(alignment: .trailing) {
+                    Text("\(recipe.name)")
+                        .font(.headline)
+                    Text("التصنيف: \(recipe.cuisine)")
+                        .font(.caption)
+                }.padding()
+                Image("\(recipe.image)")
+                    .resizable()
+                    .frame(width: 152.0, height: 105.0).clipShape(UnevenRoundedRectangle(cornerRadii: .init(
+                        topLeading: 0.0,
+                        bottomLeading: 0.0,
+                        bottomTrailing: 8.0,
+                        topTrailing: 8.0
+                    ), style: .continuous))
+            }//end of HStack
+            
+        }//end of ZStack
+        
+    }//end of createRecipeView
+    
+    func displayEmptyMsg() -> some View{
+        return Text("لم تقم بتفضيل أي وصفة بعد").font(.title).multilineTextAlignment(.center).padding()
     }
 }
 
-//------------------------
-//functions
-func createRecipeView(recipeName: String, recipeCuisine: String, recipeImage: String) -> some View{
-    return ZStack{
-        
-        RoundedRectangle(cornerRadius: 8).fill(Color(.systemBackground))
-        Text(Image(systemName: "heart.fill")).font(.headline)
-            .foregroundColor(Color("PrimaryYellow")).position(CGPoint(x: 25.0, y: 22.0))
-        
-        HStack {
-            Spacer()
-            VStack(alignment: .trailing) {
-                Text("\(recipeName)")
-                    .font(.headline)
-                Text("التصنيف: \(recipeCuisine)")
-                    .font(.caption)
-                    .padding(.top, -5.0)
-            }.padding()
-            Image("\(recipeImage)")
-                .resizable()
-                .frame(width: 152.0, height: 105.0).clipShape(UnevenRoundedRectangle(cornerRadii: .init(
-                    topLeading: 0.0,
-                    bottomLeading: 0.0,
-                    bottomTrailing: 8.0,
-                    topTrailing: 8.0
-                ), style: .continuous))
-        }//end of HStack
-        
-    }//end of ZStack
-}//end of createRecipeView
 
 #Preview {
     FavoritesPage()

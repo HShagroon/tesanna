@@ -13,6 +13,8 @@
 		6BC0CA092B05F8FF00617411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0CA082B05F8FF00617411 /* ContentView.swift */; };
 		6BC0CA0B2B05F90100617411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0CA0A2B05F90100617411 /* Assets.xcassets */; };
 		6BC0CA0E2B05F90100617411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */; };
+		FD6888EC2B15CCB800F78C80 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */; };
+		FD6888F02B1733D100F78C80 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */; };
 		FDF0D9C22B0F4F9900A8E694 /* FavoritesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		6BC0CA082B05F8FF00617411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BC0CA0A2B05F90100617411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +65,10 @@
 				6BC0CA062B05F8FF00617411 /* tesannaApp.swift */,
 				6BC0CA082B05F8FF00617411 /* ContentView.swift */,
 				FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */,
+				FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */,
 				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				6BC0CA0C2B05F90100617411 /* Preview Content */,
+				FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */,
 			);
 			path = tesanna;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 			files = (
 				6B5D51892B06696400BAE163 /* SecondView.swift in Sources */,
 				6BC0CA092B05F8FF00617411 /* ContentView.swift in Sources */,
+				FD6888F02B1733D100F78C80 /* RecipeViewModel.swift in Sources */,
 				FDF0D9C22B0F4F9900A8E694 /* FavoritesPage.swift in Sources */,
 				6BC0CA072B05F8FF00617411 /* tesannaApp.swift in Sources */,
+				FD6888EC2B15CCB800F78C80 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tesanna/Preview Content\"";
+				DEVELOPMENT_TEAM = S6P962D2PT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tesanna/Preview Content\"";
+				DEVELOPMENT_TEAM = S6P962D2PT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
