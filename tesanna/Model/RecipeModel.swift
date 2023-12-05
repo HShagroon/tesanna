@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
     
-struct RecipeModel{
-        let ID: Int
+struct RecipeModel: Identifiable{
+    
+    
+        let id: Int
         var name: String
         var servingSize: Int
         let cuisine: String
@@ -20,8 +22,8 @@ struct RecipeModel{
         var image: String
         var isFaved : Bool
         
-    init(ID: Int, name: String, servingSize: Int, cuisine: String, resource: String, ingredients: [String], cookingSteps: [String], image: String, isFaved: Bool) {
-            self.ID = ID
+    init(id: Int, name: String, servingSize: Int, cuisine: String, resource: String, ingredients: [String], cookingSteps: [String], image: String, isFaved: Bool) {
+            self.id = id
             self.name = name
             self.servingSize = servingSize
             self.cuisine = cuisine
