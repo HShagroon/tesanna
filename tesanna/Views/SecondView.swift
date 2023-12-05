@@ -45,7 +45,7 @@ struct SecondView: View {
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 1), spacing: 20) {
                         ForEach(imageInfo, id: \.imageName) { info in
-                            NavigationLink(destination: ImageDetailView(imageInfo: info)) {
+                            NavigationLink(destination: ImageDetailView()) {
                                 ZStack(alignment: .bottomTrailing){
                                     Image(info.imageName)
                                         .resizable()

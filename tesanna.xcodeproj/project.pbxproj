@@ -11,7 +11,6 @@
 		6B3BEAE62B1DB6F000244D42 /* CuisineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BEAE52B1DB6F000244D42 /* CuisineModel.swift */; };
 		6B3BEAE92B1DB79700244D42 /* CuisineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */; };
 		6B5D51892B06696400BAE163 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D51882B06696400BAE163 /* SecondView.swift */; };
-		6B5D518B2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */; };
 		6BC0CA072B05F8FF00617411 /* tesannaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0CA062B05F8FF00617411 /* tesannaApp.swift */; };
 		6BC0CA092B05F8FF00617411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0CA082B05F8FF00617411 /* ContentView.swift */; };
 		6BC0CA0B2B05F90100617411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0CA0A2B05F90100617411 /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		6B3BEAE52B1DB6F000244D42 /* CuisineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineModel.swift; sourceTree = "<group>"; };
 		6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineViewModel.swift; sourceTree = "<group>"; };
 		6B5D51882B06696400BAE163 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
-		6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "alfont_com_HONORSansArabicUI-M.ttf"; path = "../../../../Downloads/alfont_com_HONORSansArabicUI-M.ttf"; sourceTree = "<group>"; };
 		6BC0CA032B05F8FF00617411 /* tesanna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tesanna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC0CA062B05F8FF00617411 /* tesannaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesannaApp.swift; sourceTree = "<group>"; };
 		6BC0CA082B05F8FF00617411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
-				6B5D518A2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf */,
 				6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -174,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC0CA0E2B05F90100617411 /* Preview Assets.xcassets in Resources */,
-				6B5D518B2B0A049200BAE163 /* alfont_com_HONORSansArabicUI-M.ttf in Resources */,
 				6BC0CA0B2B05F90100617411 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
