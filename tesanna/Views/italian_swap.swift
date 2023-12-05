@@ -10,7 +10,7 @@ import SwiftUI
 struct italian_swap: View {
     
     @State private var currentTab = 0
-    @State var isSecondViewActive:Bool = true
+    @State var isSecondViewActive:Bool = false
 
     var body: some View {
         
