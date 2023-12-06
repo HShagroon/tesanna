@@ -70,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */,
-				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -112,6 +111,7 @@
 		6BC0CA052B05F8FF00617411 /* tesanna */ = {
 			isa = PBXGroup;
 			children = (
+				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				6D38B6DC2B205FA500FBAAA3 /* tesanna.entitlements */,
 				6B3BEAEA2B1DB86200244D42 /* Views */,
 				6B3BEAE72B1DB75800244D42 /* ViewModel */,
