@@ -24,4 +24,12 @@ struct CuisineModel: Identifiable{
     }
     
     
+//    init(record: CKRecord) {
+//        self.id = record.recordID
+//        self.cid=record["cid"] as? Int ?? 0
+//        self.name = record["name"] as? String ?? "N/A"
+//        self.image = record["img"]  as? String ?? "N/A"
+//        
+//        }
+    
 }

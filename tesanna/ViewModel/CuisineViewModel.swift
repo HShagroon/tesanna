@@ -7,9 +7,45 @@
 
 import Foundation
 import SwiftUI
+import CloudKit
 
-class CuisineViewModel{
+class CuisineViewModel: ObservableObject{
+//    
+//   var c : [CuisineModel] = []
+//    
+//    
+//    func fetchCusine(){
+//        
+//        let predicate  = NSPredicate(value: true)
+//        
+//        let query  = CKQuery(recordType: "cusines", predicate: predicate)
+//        
+//        let opreration = CKQueryOperation(query: query)
+//        opreration.recordMatchedBlock = { recordId,
+//            result in
+//            DispatchQueue.main.async {
+//                
+//                switch result{
+//                case .success(let record):
+//                    let cusine  = CuisineModel(record: record)
+//                    self.c.append(cusine)
+//                    
+//                case .failure(let error):
+//                    print("\(error .localizedDescription)")
+//                    
+//                }//switch
+//            }//DispatchQueue
+//        }
+//        CKContainer(identifier: "iCloud.a.testingApp").publicCloudDatabase.add(opreration)
+//        
+//    }
+//    
+//    
     
+    
+    
+    
+
         func createList()-> [CuisineModel]{
     
          var list = [CuisineModel]()
@@ -21,6 +57,9 @@ class CuisineViewModel{
         return list
     }
 }
+
+
+
 
 func getCuisineType(CuisineID:Int)-> CuisineModel{
     
@@ -47,3 +86,6 @@ func getCuisineType(CuisineID:Int)-> CuisineModel{
     
     
 }
+
+
+

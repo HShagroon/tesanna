@@ -34,6 +34,7 @@
 		6BC0CA082B05F8FF00617411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BC0CA0A2B05F90100617411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6D38B6DC2B205FA500FBAAA3 /* tesanna.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tesanna.entitlements; sourceTree = "<group>"; };
 		A0846D382B1F1891006049A0 /* italian_swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = italian_swap.swift; sourceTree = "<group>"; };
 		A0846D3A2B1F192E006049A0 /* asian_swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asian_swap.swift; sourceTree = "<group>"; };
 		A0846D3C2B1F1957006049A0 /* arabic_swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arabic_swap.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				6B3BEAE82B1DB79700244D42 /* CuisineViewModel.swift */,
+				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -110,6 +112,7 @@
 		6BC0CA052B05F8FF00617411 /* tesanna */ = {
 			isa = PBXGroup;
 			children = (
+				6D38B6DC2B205FA500FBAAA3 /* tesanna.entitlements */,
 				6B3BEAEA2B1DB86200244D42 /* Views */,
 				6B3BEAE72B1DB75800244D42 /* ViewModel */,
 				6B3BEAE42B1DB69900244D42 /* Model */,
@@ -121,7 +124,6 @@
 		6BC0CA0C2B05F90100617411 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6BC0CA0A2B05F90100617411 /* Assets.xcassets */,
 				6BC0CA0D2B05F90100617411 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -341,10 +343,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tesanna/tesanna.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tesanna/Preview Content\"";
-				DEVELOPMENT_TEAM = S6P962D2PT;
+				DEVELOPMENT_TEAM = 5DX6BTSG67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -357,11 +360,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haneen.tesanna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tesanna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,10 +376,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tesanna/tesanna.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tesanna/Preview Content\"";
-				DEVELOPMENT_TEAM = S6P962D2PT;
+				DEVELOPMENT_TEAM = 5DX6BTSG67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -386,11 +393,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haneen.tesanna;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tesanna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

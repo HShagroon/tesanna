@@ -7,43 +7,47 @@
 
 import SwiftUI
 struct SecondView: View {
-    var cuisineVM = CuisineViewModel()
+    
+    
+    @StateObject var cuisineVM = CuisineViewModel()
     
     var body: some View {
-       
-            VStack(alignment: .leading) { // Align contents to the leading edge
-                NavigationLink(destination: FavoritesPage()) {
-                    Image(systemName: "heart.square.fill")
-                        .resizable()
-                        .foregroundColor(Color("PrimaryYellow"))
-                        .frame(width: 24, height: 24)
-                        .padding(.leading, 20)
-                }
-                
-                HStack {
-                    Spacer()
-                    Text("إيش نفسك تطبخ اليوم؟")
-                        .font(.system(size: 24))
-                        .fontWeight(.bold)
-                        .foregroundColor(.primary)
-                        .padding(.trailing, 30)
-                        .padding(.bottom, 20)
-                }
-             
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(.gray.opacity(0.2))
-                    .padding(.top, 5)
-                
-                creatCuisinView()
+        
+        VStack(alignment: .leading) { // Align contents to the leading edge
+            NavigationLink(destination: FavoritesPage()) {
+                Image(systemName: "heart.square.fill")
+                    .resizable()
+                    .foregroundColor(Color("PrimaryYellow"))
+                    .frame(width: 24, height: 24)
+                    .padding(.leading, 20)
             }
-            .background(Color("background"))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
             
+            HStack {
+                Spacer()
+                Text("إيش نفسك تطبخ اليوم؟")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(.primary)
+                    .padding(.trailing, 30)
+                    .padding(.bottom, 20)
+            }
+            
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(.gray.opacity(0.2))
+                .padding(.top, 5)
+            
+            creatCuisinView()
+        }
+        .background(Color("background"))
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        
     }
+    
+    
     func creatCuisinView() -> some View {
-       let cuisineList = cuisineVM.createList()
+        let cuisineList = cuisineVM.createList()
         return ScrollView {
             LazyVGrid(columns: Array(repeating: GridItem(), count: 1), spacing: 20) {
                 ForEach(cuisineList) { cuisine in
@@ -73,8 +77,10 @@ struct SecondView: View {
             .padding([.leading, .trailing], 30)
             .padding(.top, 10)
         }
-    }//end of createCuisineView()
-
+        
+        
+        
+        
+    }
     
 }
-    
