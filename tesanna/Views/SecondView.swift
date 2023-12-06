@@ -7,13 +7,7 @@
 
 import SwiftUI
 struct SecondView: View {
-    var imageInfo: [(imageName: String, labelText: String)] = [
-        ("image1", "إيطالي"),
-        ("image2", "هندي"),
-        ("image3", "آسيوي"),
-        ("image4", "عربي"),
-        ("image5","وصفة عشوائية")
-    ]
+    var cuisineVM = CuisineViewModel()
     
     var body: some View {
        
@@ -41,42 +35,46 @@ struct SecondView: View {
                     .foregroundColor(.gray.opacity(0.2))
                     .padding(.top, 5)
                 
-                
-                ScrollView {
-                    LazyVGrid(columns: Array(repeating: GridItem(), count: 1), spacing: 20) {
-                        ForEach(imageInfo, id: \.imageName) { info in
-                            NavigationLink(destination: ImageDetailView()) {
-                                ZStack(alignment: .bottomTrailing){
-                                    Image(info.imageName)
-                                        .resizable()
-                                        .frame(width: 336.7, height: 180)
-                                        .cornerRadius(10)
-                                    Image("yelloEffect")
-                                        .resizable()
-                                        .frame(width: 336.7, height: 180)
-                                        .cornerRadius(10)
-                                    Text(info.labelText)
-                                        .font(.system(size: 24))
-                                        .fontWeight(.bold)
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding(10)
-                                }
-                                .padding([.leading, .trailing], 10)
-                                .padding(.top, 10)
-                            }
-                            
-                        }
-                    }
-                    .padding([.leading, .trailing], 30)
-                    .padding(.top, 10)
-                }
+                creatCuisinView()
             }
             .background(Color("background"))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             
     }
+    func creatCuisinView() -> some View {
+       let cuisineList = cuisineVM.createList()
+        return ScrollView {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 1), spacing: 20) {
+                ForEach(cuisineList) { cuisine in
+                    NavigationLink(destination: cuisine.destinationView, label: {
+                        ZStack(alignment: .bottomTrailing){
+                            Image("\(cuisine.image)")
+                                .resizable()
+                                .frame(width: 336.7, height: 180)
+                                .cornerRadius(10)
+                            Image("yelloEffect")
+                                .resizable()
+                                .frame(width: 336.7, height: 180)
+                                .cornerRadius(10)
+                            Text("\(cuisine.name)")
+                                .font(.system(size: 24))
+                                .fontWeight(.bold)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding(10)
+                        }
+                        .padding([.leading, .trailing], 10)
+                        .padding(.top, 10)
+                    })
+                    
+                }
+            }
+            .padding([.leading, .trailing], 30)
+            .padding(.top, 10)
+        }
+    }//end of createCuisineView()
+
     
 }
     

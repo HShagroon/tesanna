@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
-class Cuisine{
+class CuisineViewModel{
     
         func createList()-> [CuisineModel]{
     
          var list = [CuisineModel]()
-            for i in 1...3{
+            for i in 1...5{
     
                 list.append(getCuisineType(CuisineID:i))
     
@@ -25,22 +26,19 @@ func getCuisineType(CuisineID:Int)-> CuisineModel{
     
     var cuisine : CuisineModel
     
-    cuisine =  CuisineModel(ID: 0, name: "", image: "")
-    
-    if(CuisineID == 1) {
-        cuisine = CuisineModel(ID: 1, name: "إيطالي", image: "image1")
-    }
-    if(CuisineID == 2) {
-        cuisine = CuisineModel(ID: 2, name: "هندي", image: "image2")
-    }
-    if(CuisineID == 3) {
-        cuisine = CuisineModel(ID: 3, name: "آسيوي", image: "image3")
-    }
-    if(CuisineID == 4) {
-        cuisine = CuisineModel(ID: 4, name: "عربي", image: "image4")
-    }
-    if(CuisineID == 3) {
-        cuisine = CuisineModel(ID: 5, name: "وصفه عشوائيه", image: "image5")
+    switch CuisineID {
+    case 1:
+        cuisine = CuisineModel(id: 1, name: "إيطالي", image: "image1", destinationView: { AnyView(italian_swap()) })
+    case 2:
+        cuisine = CuisineModel(id: 2, name: "هندي", image: "image2", destinationView: { AnyView(indian_swap()) })
+    case 3:
+        cuisine = CuisineModel(id: 3, name: "آسيوي", image: "image3", destinationView: { AnyView(asian_swap()) })
+    case 4:
+        cuisine = CuisineModel(id: 4, name: "عربي", image: "image4", destinationView: { AnyView(arabic_swap()) })
+    case 5:
+        cuisine = CuisineModel(id: 5, name: "وصفه عشوائيه", image: "image5", destinationView: { AnyView(random_swap()) })
+    default:
+        cuisine = CuisineModel(id: 0, name: "", image: "", destinationView: { AnyView(EmptyView()) })
     }
     
    return cuisine

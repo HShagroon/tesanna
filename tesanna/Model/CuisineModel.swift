@@ -9,16 +9,18 @@
 import Foundation
 import SwiftUI
 
-struct CuisineModel{
+struct CuisineModel: Identifiable{
     
-    let ID : Int
+    let id: Int
     var name :String
     var image: String
+    let destinationView: () -> AnyView
     
-    init(ID: Int, name: String, image: String) {
-        self.ID = ID
+    init(id: Int, name: String, image: String, destinationView: @escaping () -> AnyView) {
+        self.id = id
         self.name = name
         self.image = image
+        self.destinationView = destinationView
     }
     
     
