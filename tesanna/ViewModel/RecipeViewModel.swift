@@ -30,5 +30,14 @@ class RecipeViewModel {
         
     }
     
+    func findRecipe(recipeId: Int) -> RecipeModel{
+        var recipe = RecipeModel(id: 0, name:  "", servingSize: 0, cuisine: "", resource: "", ingredients: [""], cookingSteps: [""], image: "", isFaved: false)
+        for i in 0...(recipesList.count - 1){
+            if (recipesList[i].id == recipeId){
+                recipe = recipesList[i]
+            }
+        }
+        return recipe
+    }
     
 }

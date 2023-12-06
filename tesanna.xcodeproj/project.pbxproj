@@ -21,6 +21,7 @@
 		FD6888EC2B15CCB800F78C80 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */; };
 		FD6888F02B1733D100F78C80 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */; };
 		FDA077ED2B2058CC000D1E16 /* random_swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA077EC2B2058CC000D1E16 /* random_swap.swift */; };
+		FDA077EF2B205ADF000D1E16 /* RecipeDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA077EE2B205ADF000D1E16 /* RecipeDetailsPage.swift */; };
 		FDF0D9C22B0F4F9900A8E694 /* FavoritesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		FD6888EB2B15CCB800F78C80 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		FD6888EF2B1733D100F78C80 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		FDA077EC2B2058CC000D1E16 /* random_swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_swap.swift; sourceTree = "<group>"; };
+		FDA077EE2B205ADF000D1E16 /* RecipeDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPage.swift; sourceTree = "<group>"; };
 		FDF0D9C12B0F4F9900A8E694 /* FavoritesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				A0846D3C2B1F1957006049A0 /* arabic_swap.swift */,
 				A0846D3E2B1F1984006049A0 /* indian_swap.swift */,
 				FDA077EC2B2058CC000D1E16 /* random_swap.swift */,
+				FDA077EE2B205ADF000D1E16 /* RecipeDetailsPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5D51892B06696400BAE163 /* SecondView.swift in Sources */,
+				FDA077EF2B205ADF000D1E16 /* RecipeDetailsPage.swift in Sources */,
 				6BC0CA092B05F8FF00617411 /* ContentView.swift in Sources */,
 				A0846D392B1F1891006049A0 /* italian_swap.swift in Sources */,
 				FDA077ED2B2058CC000D1E16 /* random_swap.swift in Sources */,
